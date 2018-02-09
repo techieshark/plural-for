@@ -40,3 +40,8 @@ node_modules/
 # Yarn Integrity file
 .yarn-integrity
 
+# deploy-on-git
+package/
+
+# Avoid checkin of compiled code
+lib/

@@ -1,14 +1,25 @@
 {
   "name": "plural-for",
-  "version": "1.0.0",
-  "description": "Pluralize English words (stupidly simple code)",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "Pluralize English words (with stupidly simple code)",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "yarn.lock"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "yarn flow && yarn lint",
     "flow": "flow",
-    "lint": "eslint index.js",
-    "build:clean": "rm index.js.flow",
-    "prepare": "cp index.js index.js.flow"
+    "lint": "eslint src/ && echo No lint issues!",
+    "build": "yarn build:clean && yarn test && yarn build:lib && yarn build:flow",
+    "build:clean": "shx rm -rf lib",
+    "build:lib": "babel src/ -d lib --copy-files --ignore '**/__tests__/**,**.test.*'",
+    "build:flow": "flow-copy-source -v -i '**.test.*' src lib",
+    "deploy": "yarn deploy:git && npm publish",
+    "deploy:npm": "npm publish",
+    "deploy:git": "yarn deploy:clean && deploy-to-git",
+    "deploy:clean": "shx rm -rf $npm_package_config_pkgDir",
+    "prepublishOnly": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -22,10 +33,33 @@
   "author": "Peter W (@techieshark)",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "deploy-to-git": "^0.1.5",
     "eslint": "^4.16.0",
     "eslint-plugin-flowtype": "^2.42.0",
-    "flow-bin": "^0.64.0"
+    "flow-bin": "^0.64.0",
+    "flow-copy-source": "^1.2.2",
+    "npm-publish-git": "git://github.com/andreineculau/npm-publish-git.git",
+    "shx": "^0.2.2"
+  },
+  "config": {
+    "pkgFile": "$npm_package_name-$npm_package_version.tgz",
+    "pkgDir": "package",
+    "deployToGit": {
+      "repository": "https://$GH_TOKEN@github.com/techieshark/plural-for.git",
+      "branch": "dist",
+      "folder": "$npm_package_config_pkgDir",
+      "script": "npm pack && tar xzf $npm_package_config_pkgFile",
+      "commit": "Automatic update from build, version $npm_package_version",
+      "user": {
+        "email": "techieshark@gmail.com",
+        "name": "Peter W (digital clone)"
+      }
+    }
   },
   "bugs": {
     "url": "https://github.com/techieshark/plural-for/issues"
