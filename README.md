@@ -22,16 +22,16 @@ npm install --save plural-for
 
 ```
 var pluralFor = require('plural-for')
-import {numToText} from 'zero-to-nine'
+var asWord = require('zero-to-nine').asWord
 
 let nOcelots = 0
 let nWolves = 2
 
-console.log(`There will be ${numToText(nOcelots)} ${pluralFor(nOcelots, 'ocelot')} left after building the wall.`)
+console.log(`There will be ${asWord(nOcelots)} ${pluralFor(nOcelots, 'ocelot')} left after building the wall.`)
 // output: "There will be zero ocelots left after building the wall."
 
-console.log(`There will be only ${numToText(nWolves)} Mexican gray ${pluralFor(nWolves, 'wolf', 'wolves')} left, sadly.`)
-// output: There will be only one Mexican gray wolves left, sadly.
+console.log(`There will be only ${asWord(nWolves)} Mexican gray ${pluralFor(nWolves, 'wolf', 'wolves')} left, sadly.`)
+// output: There will be only two Mexican gray wolves left, sadly.
 
 ```
 See also: more about [biodiversity threats example](https://phys.org/news/2017-08-border-wall-endangered-species-expert.html).
