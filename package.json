@@ -1,6 +1,6 @@
 {
   "name": "plural-for",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Pluralize English words (with stupidly simple code)",
   "main": "lib/index.js",
   "files": [
