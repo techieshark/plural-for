@@ -1,5 +1,7 @@
 # plural-for: tiny node module to pluralize English words
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/techieshark/plural-for.svg)](https://greenkeeper.io/)
+
 This is meant to be small and stupidly simple.
 
 For the absolutely simplest alternative, see [sorp](https://www.npmjs.com/package/sorp).
