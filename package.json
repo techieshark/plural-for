@@ -15,6 +15,7 @@
     "build:clean": "shx rm -rf lib",
     "build:lib": "babel src/ -d lib --copy-files --ignore '**/__tests__/**,**.test.*'",
     "build:flow": "flow-copy-source -v -i '**.test.*' src lib",
+    "commit": "npx git-cz",
     "deploy": "yarn deploy:git && npm publish",
     "deploy:npm": "npm publish",
     "deploy:git": "yarn deploy:clean && deploy-to-git",
