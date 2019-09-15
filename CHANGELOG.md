@@ -10,6 +10,19 @@ for additional commit guidelines
 
 ## [Unreleased]
 
+## 1.0.4 (2019-09-15)
+
+### Fixed
+
+* 🐛 (dev-deps) Bump devDependency versions (for security) ([0ed1017](https://github.com/techieshark/plural-for/commit/0ed1017))
+
+## 1.0.3 (2019-09-15)
+
+### Fixed
+
+* 🐛 (dev-deps) Bump flow-copy-source for security ([12f0f7c](https://github.com/techieshark/plural-for/commit/12f0f7c))
+
+
 ## [1.0.2] (2019-09-15)
 
 ### Fixed
