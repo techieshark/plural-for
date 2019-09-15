@@ -42,7 +42,7 @@
     "eslint": "^4.16.0",
     "eslint-plugin-flowtype": "^2.42.0",
     "flow-bin": "^0.64.0",
-    "flow-copy-source": "^1.2.2",
+    "flow-copy-source": "^2.0.0",
     "npm-publish-git": "git://github.com/andreineculau/npm-publish-git.git",
     "shx": "^0.2.2"
   },
