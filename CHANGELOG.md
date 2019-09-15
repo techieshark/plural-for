@@ -12,6 +12,8 @@ for additional commit guidelines
 
 ## [1.0.2] (2019-09-15)
 
+### Fixed
+
 - ⬆️ (dev-deps) Bump node-tar version in response to potential security issue in previous version.
      Note: node-tar was used by the flow build process and was likely not an actual issue for us.
 
