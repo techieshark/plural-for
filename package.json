@@ -41,7 +41,7 @@
     "babel-eslint": "^10.0.3",
     "deploy-to-git": "^0.1.5",
     "eslint": "^6.4.0",
-    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-flowtype": "^5.1.2",
     "flow-bin": "^0.109.0",
     "flow-copy-source": "^2.0.0",
     "npm-publish-git": "git://github.com/andreineculau/npm-publish-git.git",
