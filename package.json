@@ -37,7 +37,7 @@
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
-    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-flow": "^7.10.1",
     "babel-eslint": "^10.0.3",
     "deploy-to-git": "^0.1.5",
     "eslint": "^6.4.0",
